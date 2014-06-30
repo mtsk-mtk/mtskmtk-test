@@ -1,0 +1,25 @@
+﻿{
+  "name": "mtskmtk-test",
+  "version": "0.0.0",
+  "description": "This example app is so cool.",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtsk-mtk/"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": " ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtsk-mtk/"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
