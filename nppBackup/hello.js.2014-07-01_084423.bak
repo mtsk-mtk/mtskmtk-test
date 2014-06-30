@@ -1,0 +1,24 @@
+﻿var fs = require('fs');
+fs.readfile('./template.html','utf-8',function(){
+
+});
+
+
+var http = require('http');
+ 
+var server = http.createServer();
+server.on('request', doRequest);
+
+port = process.env.PORT?process.env.PORT:3000;
+server.listen(port);
+
+
+console.log('Server running!');
+ 
+// リクエストの処理
+function doRequest(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.write('Hello World\n');
+
+    res.end();
+}

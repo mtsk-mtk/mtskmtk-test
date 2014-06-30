@@ -1,4 +1,8 @@
-﻿var http = require('http');
+﻿var fs = require('fs');
+
+
+
+var http = require('http');
  
 var server = http.createServer();
 server.on('request', doRequest);
@@ -11,8 +15,14 @@ console.log('Server running!');
  
 // リクエストの処理
 function doRequest(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('Hello World\n');
-    res.write(port+'\n');
-    res.end();
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    fs.readfile('./template.html','utf-8',function(err,data){
+		if(err){
+			res.write('temlate read err');
+		}else{
+			res.write(data);
+		}
+		res.end();
+	});
+	
 }
