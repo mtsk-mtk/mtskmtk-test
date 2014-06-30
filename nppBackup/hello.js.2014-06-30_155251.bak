@@ -2,11 +2,7 @@
  
 var server = http.createServer();
 server.on('request', doRequest);
-
-port = process.env.PORT?process.env.PORT:3000;
-server.listen(port);
-
-
+server.listen(1234);
 console.log('Server running!');
  
 // リクエストの処理
