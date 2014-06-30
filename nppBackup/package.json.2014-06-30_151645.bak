@@ -19,8 +19,6 @@
   "bugs":{
     "url":"git@heroku.com:mtskmtk-test.git"
   },
-  "dependencies":{
-  },
   "engines":{
     "node":"0.10.x"
   }
