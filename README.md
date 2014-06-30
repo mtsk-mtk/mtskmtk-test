@@ -1,4 +1,1 @@
-﻿mtskmtk-test
-============
-
-heroku node.js test
+node.js test
