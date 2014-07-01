@@ -21,7 +21,7 @@ function doRequest(req, res) {
 			res.write('template read err');
 		}else{
 			var html = data.replace(/@title@/g,'variable test').replace(/@msg@/g,'variable msg');
-			res.write(html);
+			res.write(data);
 		}
 		res.end();
 	});
