@@ -23,10 +23,6 @@ function doRequest(req, res) {
 			'R-9',
 			'SilverHawk',
 			'BicViper',
-			'SilverGun',
-			'Ikaruga',
-			'Raiden',
-			'X-lay',
 		]
 	});
 	res.write(html);
