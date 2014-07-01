@@ -16,17 +16,21 @@ console.log('Server running!');
 // リクエストの処理
 function doRequest(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
-
-	var html = ejs.render(template,{
-		title:'ejs test',
-		data:[
-			'R-9',
-			'SilverHawk',
-			'BicViper',
-		]
+    fs.readFilefunction(err,data){
+		if(err){
+			res.write('template read err');
+		}else{
+			var html = ejs.render(template,{
+				title:'ejs test',
+				data:[
+					'R-9',
+					'SilverHawk',
+					'BicViper',
+				]
+			});
+			res.write(html);
+		}
+		res.end();
 	});
-	res.write(html);
-
-	res.end();
 	
 }
