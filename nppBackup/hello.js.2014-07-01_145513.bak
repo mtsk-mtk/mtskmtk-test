@@ -20,7 +20,6 @@ function doRequest(req, res) {
 		if(err){
 			res.write('template read err');
 		}else{
-			var html = data.replace(/@title@/g,'variable test').replace(/@msg@/g,'variable msg');
 			res.write(data);
 		}
 		res.end();
