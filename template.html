@@ -5,22 +5,11 @@
 	</head>
 	<body>
 		<h1><%= title %></h1>
-		<table>
-			<thead>
-				<tr>
-					<td>num</td>
-					<td>name</td>
-				</tr>
-			</thead>
-			<tbody>
-			<% var i=0;data.forEach(function(val){ %>
-				<tr>
-					<td><%= i %></td>
-					<td><%= val %></td>
-				</tr>
-			<% });i++; %>
-			<tbody>
-		</table>
+		<ul>
+		<% data.forEach(function(val){ %>
+			<li><%= val %></li>
+		<% }) %>
+		</ul>
 		
 	</body>
 </html>
