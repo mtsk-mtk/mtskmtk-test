@@ -1,8 +1,8 @@
-﻿var ejs = require('ejs');
-var http = require('http');
+﻿var fs = require('fs');
 
-var fs = require('fs');
-var template = fs.readFileSync('./template.html','utf-8');
+
+
+var http = require('http');
  
 var server = http.createServer();
 server.on('request', doRequest);
@@ -16,18 +16,13 @@ console.log('Server running!');
 // リクエストの処理
 function doRequest(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.readFilefunction(err,data){
+    fs.readFile('./template.html','utf-8',function(err,data){
 		if(err){
 			res.write('template read err');
 		}else{
-			var html = ejs.render(template,{
-				title:'ejs test',
-				data:[
-					'R-9',
-					'SilverHawk',
-					'BicViper',
-				]
-			});
+			var ejs = require('ejs');
+		
+			var html = data.replace(/@title@/g,'variable test').replace(/@msg@/g,'variable msg');
 			res.write(html);
 		}
 		res.end();

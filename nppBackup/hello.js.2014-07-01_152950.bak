@@ -20,14 +20,9 @@ function doRequest(req, res) {
 		if(err){
 			res.write('template read err');
 		}else{
-			var html = ejs.render(template,{
-				title:'ejs test',
-				data:[
-					'R-9',
-					'SilverHawk',
-					'BicViper',
-				]
-			});
+
+		
+			var html = data.replace(/@title@/g,'variable test').replace(/@msg@/g,'variable msg');
 			res.write(html);
 		}
 		res.end();

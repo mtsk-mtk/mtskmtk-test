@@ -13,12 +13,12 @@
 				</tr>
 			</thead>
 			<tbody>
-			<% var i=0;data.forEach(function(val){ %>
+			<%  %>
 				<tr>
-					<td><%= i %></td>
-					<td><%= val %></td>
+					<td><%=  %></td>
+					<td><%=  %></td>
 				</tr>
-			<% });i++; %>
+			<%  %>
 			<tbody>
 		</table>
 		
